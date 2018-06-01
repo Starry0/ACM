@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a;
+	cin>>a;
+	switch (a/100000)
+	{
+		case (0) :cout<<a/10;
+		break;
+		case (1):cout<<10000+(a-100000)*0.075;
+		break;
+		case (2):cout<<17500+(a-200000)*0.05;
+		break;
+		case (3):cout<<17500+(a-200000)*0.05;
+		break;
+		case (4):cout<<27500+(a-400000)*0.03;
+		break;
+		case (5):cout<<27500+(a-400000)*0.03;
+		break;
+		case (6):cout<<33500+(a-600000)*0.015;
+		break;
+		case (7):cout<<33500+(a-600000)*0.015;
+		break;
+		case (8):cout<<33500+(a-600000)*0.015;
+		break;
+		case (9):cout<<33500+(a-600000)*0.015;
+		break;
+		default :cout<<39500+(a-1000000)*0.01;
+	}
+   return 0;
+}
+		

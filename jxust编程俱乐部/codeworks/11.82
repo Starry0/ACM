@@ -1,0 +1,87 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<malloc.h>
+typedef struct student{ 
+
+int num; 
+float score; 
+struct student *next; 
+} STU; 
+
+int main(){
+	setbuf(stdout,NULL); 
+	STU *creat(int ); 
+	void print(STU *head); 
+	STU *head_a,*head_b,*p1,*p2,*pmin; 
+	int num_temp,n,m;
+	scanf("%d%d",&n,&m);
+	float score_temp; 
+//	printf("Input the records of a:\n");
+	head_a=creat(n); 
+//	printf("a:\n"); 
+ //   print(head_a); 
+  //  printf("Input the records of b:\n"); 
+    head_b=creat(m); 
+//    printf("b:\n"); 
+//    print(head_b); 
+    for(p1=head_a;p1!=NULL;p1=p1->next)
+    p2=p1; 
+    p2->next=head_b;
+    
+//    printf("After connected:\n"); 
+   // print(head_a);
+    
+    for(p1=head_a;p1->next!=NULL;p1=p1->next) 
+    {
+    	pmin=p1;
+    	for(p2=p1->next;p2!=NULL;p2=p2->next)
+    	if(p2->num<pmin->num) 
+    	pmin=p2; 
+    	if(pmin!=p1) 
+    	{
+    		num_temp=p1->num;
+    		p1->num=pmin->num;
+    		pmin->num=num_temp;
+    		
+    		score_temp=p1->score;
+    		p1->score=pmin->score; 
+    		pmin->score=score_temp;
+    		}
+    }
+    printf("After sorted:\n");
+    print(head_a);
+    return 0;
+}
+STU *creat(int x){
+	STU *p1,*p2,*head=NULL;
+	int n=0;
+	p1=(STU *)malloc(sizeof(STU));
+	p2=p1;x--;
+	scanf("%d%f",&p1->num,&p1->score);
+	while(x--)
+	{
+		n++;
+		if(n==1)
+		head=p1;
+		else p2->next=p1;
+		p2=p1;
+		p1=(STU *)malloc(sizeof(STU));
+		scanf("%d%f",&p1->num,&p1->score);
+	}
+	p2->next=NULL;
+	return head;
+}
+
+void print(STU *head){
+	STU *p1;
+	if(head==NULL)
+	{
+		printf("NULL list!\n");
+		return;
+	}
+	else
+	{
+		for(p1=head;p1!=NULL;p1=p1->next)
+		printf("%d,%.2f\n",p1->num,p1->score);
+	}
+}

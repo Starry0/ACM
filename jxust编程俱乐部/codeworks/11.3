@@ -1,0 +1,22 @@
+#include<iostream>
+#include<string>
+using namespace std;
+struct student
+{
+	string xuehao;
+	string name;
+	int chji1;
+	int chji2;
+	int chji3;
+};
+int main()
+{
+	student stu[100];
+	int N,i;
+	cin>>N;
+	for(i=0;i<N;i++)
+	cin>>stu[i].xuehao>>stu[i].name>>stu[i].chji1>>stu[i].chji2>>stu[i].chji3;
+	for(i=0;i<N;i++)
+	cout<<stu[i].xuehao<<','<<stu[i].name<<','<<stu[i].chji1<<','<<stu[i].chji2<<','<<stu[i].chji3<<endl;
+	return 0;
+}

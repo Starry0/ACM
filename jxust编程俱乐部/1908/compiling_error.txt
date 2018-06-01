@@ -1,0 +1,8 @@
+E:\code\jxust���̾��ֲ�\1908\1908.cpp:5:5: error: expected unqualified-id before 'int'
+ ll (int x){
+     ^
+E:\code\jxust���̾��ֲ�\1908\1908.cpp:5:5: error: expected ')' before 'int'
+E:\code\jxust���̾��ֲ�\1908\1908.cpp: In function 'int main()':
+E:\code\jxust���̾��ֲ�\1908\1908.cpp:15:14: error: 'f' was not declared in this scope
+     cout<<f(n)<<endl;
+              ^

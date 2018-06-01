@@ -1,0 +1,18 @@
+E:\code\jxust���̾��ֲ�\1974\1974.cpp: In function 'long long int f(int, int)':
+E:\code\jxust���̾��ֲ�\1974\1974.cpp:11:3: error: expected ';' before 'for'
+   for(int i=n-m;i>0;i--)
+   ^
+E:\code\jxust���̾��ֲ�\1974\1974.cpp:11:17: error: name lookup of 'i' changed for ISO 'for' scoping [-fpermissive]
+   for(int i=n-m;i>0;i--)
+                 ^
+E:\code\jxust���̾��ֲ�\1974\1974.cpp:11:17: note: (if you use '-fpermissive' G++ will accept your code)
+E:\code\jxust���̾��ֲ�\1974\1974.cpp:11:24: error: expected ';' before ')' token
+   for(int i=n-m;i>0;i--)
+                        ^
+E:\code\jxust���̾��ֲ�\1974\1974.cpp: In function 'int main()':
+E:\code\jxust���̾��ֲ�\1974\1974.cpp:17:28: error: 'scanf' was not declared in this scope
+   while (scanf("%d%d",&n,&m)!=EOF){
+                            ^
+E:\code\jxust���̾��ֲ�\1974\1974.cpp:17:31: error: 'EOF' was not declared in this scope
+   while (scanf("%d%d",&n,&m)!=EOF){
+                               ^

@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	float x,a,m;
+	scanf("%f",&x);
+	a=x/2;
+	do
+	{
+		m=a;
+		a=(a+x/a)*0.5;
+	}while (fabs(m-a)>1e-5);
+		printf("%.3f",a);
+		return 0;
+}

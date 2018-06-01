@@ -1,0 +1,38 @@
+二分问题
+
+ok(x) 表示max(abs(a[i]-a[i+1])) = x 时修改的次数是否小于等于K
+
+ans[i] 表示前i个数最少修改多少使的相差小于x 
+当a[i]-a[j] <= x(i-j)时 表示可以不修改第i个和第j个，修改j-i中间的数就能使的
+相差小于x了。
+
+#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
+const int N = 2020;
+ll a[N], ans[N];
+ll n, k;
+bool ok(ll x) {
+    ll res = N;
+    for(ll i = 1; i <= n; i ++) {
+        ans[i] = i-1;
+        for(ll j = 1; j < i; j ++) {
+            if(abs(a[i]-a[j]) <= x*(i-j))
+                ans[i] = min(ans[i], ans[j]+i-j-1);
+        }
+        res = min(res,ans[i]+n-i);
+    }
+    return res <= k;
+}
+int main() {
+    cin >> n >> k;
+    for(int i = 1; i <= n; i ++) cin >> a[i];
+    ll l = 0, r = 2e9;
+    while(l < r) {
+        ll m = (l+r) >> 1;
+        if(ok(m)) r = m;
+        else l = m+1;
+    }
+    printf("%lld\n",r);
+    return 0;
+}

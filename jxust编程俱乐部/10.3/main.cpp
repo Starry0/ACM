@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	void input(int *a);
+	void chuli(int *a);
+	void output(int *a);
+	int a[10];
+	input(a);
+	chuli(a);
+	output(a);
+	return 0;
+}
+void input(int *a)
+{
+	for(int i=0;i<10;i++)
+	cin>>*(a+i);
+}
+void chuli(int *a)
+{
+	int *min,*max,*p,m;
+	max=min=a;
+	for (p=a+1;p<a+10;p++)
+	if (*p<*min)min=p;
+	else if(*p>*max)max=p;
+	m=a[0];a[0]=*min;*min=m;
+	if(max==a)
+        max=min;
+	m=a[9];a[9]=*max;*max=m;
+
+}
+void output(int *a)
+{
+    int *p;
+    for(p=a;p<a+10;p++)
+        cout<<*p<<" ";
+    cout<<endl;
+    return;
+}
+
+
+
+

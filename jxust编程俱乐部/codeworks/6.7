@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int N,a[100],j,n,i;
+	cin>>N;
+	for(i=2;i<=N;i++)
+	{
+		int k=0,sum=0;
+		for(j=1;j<i;j++)
+		if(i%j==0)
+			{
+				a[k]=j;
+				k++;
+			}
+		for(n=0;n<k;n++)
+		sum+=a[n];
+		if(i==sum)
+		{
+			cout<<i<<" its factors are ";
+			for(j=0;j<k;j++)
+			cout<<a[j]<<" ";
+			cout<<endl;
+		}
+	}
+	return 0;
+}
+		

@@ -1,0 +1,30 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	int n,m,one,two,three,four,five;
+	cin>>n;
+	m=log10(n)+1;
+	switch(m)
+	{
+		case (1):one=n;break;
+		case (2):{one=n%10;two=(n-one)/10;}break;
+		case (3):{one=n%10;two=((n-one)/10)%10;three=(n-one-two*10)/100;}break;
+		case (4):{one=n%10;two=((n-one)/10)%10;three=((n-one-two*10)/100)%10;four=(n-one-two*10-three*100)/1000;}break;
+		default :{one=n%10;two=((n-one)/10)%10;three=((n-one-two*10)/100)%10;four=((n-one-two*10-three*100)/1000)%10;five=(n-one-two*10-three*100-four*1000)/10000;}break;
+	}
+	switch(m)
+	{
+		case (1):cout<<m<<endl<<one<<endl<<one;break;
+		case (2):{cout<<m<<endl<<two<<" "<<one<<endl;
+		cout<<one<<two;}break;
+		case (3):{cout<<m<<endl<<three<<" "<<two<<" "<<three<<endl;
+		cout<<one<<two<<three;}break;
+		case (4):{cout<<m<<endl<<four<<" "<<three<<" "<<two<<" "<<one<<endl;
+		cout<<one<<two<<three<<four;}break;
+		case (5):{cout<<m<<endl<<five<<" "<<four<<" "<<three<<" "<<two<<" "<<one<<endl;
+		cout<<one<<two<<three<<four<<five;}break;
+	}
+	return 0;
+}

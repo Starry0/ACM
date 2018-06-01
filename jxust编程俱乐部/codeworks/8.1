@@ -1,0 +1,27 @@
+#include<stdio.h>
+int gys(int x,int y)
+{
+	int r;
+	while (y!=0)
+	{
+		r=x%y;
+		x=y;
+		y=r;
+	}
+	return x;
+}
+int gbs(int x,int y)
+{
+	int r;
+	r=x/gys(x,y)*y;
+	return r;
+}
+int main()
+{
+	int a,b,n,m;
+	scanf("%d%d",&a,&b);
+	n=gys(a,b);
+	m=gbs(a,b);
+	printf("%d %d",n,m);
+	return 0;
+}

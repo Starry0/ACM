@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	void move(int *,int,int );
+	int number[20],n,m,i;
+	cin>>n;
+	for(i=0;i<n;i++)
+	cin>>number[i];
+	cin>>m;
+	move(number,n,m);
+	for(i=0;i<n;i++)
+	cout<<number[i]<<" ";
+	cout<<endl;
+	return 0;
+}
+void move(int *a,int n,int m)
+{
+	int *p,a_end;
+	a_end=*(a+n-1);
+	for(p=a+n-1;p>a;p--)
+	*p=*(p-1);
+	*a=a_end;
+	m--;
+	if(m>0)move(a,n,m);
+}

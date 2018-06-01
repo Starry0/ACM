@@ -1,0 +1,26 @@
+STU *insert(STU *head_a,STU *head_b){
+	STU *pa1,*pa2,*pb1,*pb2;
+	pa2=pa1=head_a;
+	pb2=pb1=head_b;
+	do{
+		while((pb1->num>pa1->num)&&(pa1->next!=NULL))
+		{
+			pa2=pa1;
+			pa1=pa1->next;
+		}
+		if(pb1->num<=pa1->num)
+		 {
+		 	if(head_a==pa1)
+		 	head_a=pb1;
+		 	else
+		 	pa2->next=pb1;
+		 	pb1=pb1->next;
+		 	pb2->next=pa1;
+		 	pa2=pb2;
+		 	pb2=pb1;
+		 }
+		  }while((pa1->next!=NULL)||(pa1==NULL&&pb1!=NULL));
+		  if((pb1!=NULL)&&(pb1->num>pa1->num)&&(pa1->next==NULL))
+		  pa1->next=pb1;
+		  return(head_a);
+}

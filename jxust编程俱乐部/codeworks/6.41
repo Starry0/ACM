@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a,n,b,i;
+	long long int sn=0;
+	cin>>n;
+	for (a=1;a<n+1;a++)
+	{
+		b=1;
+		for (i=1;i<a+1;i++)
+		{
+			b=b*i;
+		}
+		sn=sn+b;
+	}
+	cout<<sn;
+	return 0;
+}

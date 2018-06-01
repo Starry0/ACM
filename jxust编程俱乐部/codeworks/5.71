@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+   int a,ten_thousand,thousand,hundred,ten,one;
+   int t=0;
+   char c=' ';
+  scanf("%d",&a);
+  if(a==0)
+   t=1;
+   while(a!=0)
+  {
+    a=a/10;
+    t++;
+    if(a==0)
+    break;
+  }
+printf("%d\n",t);
+  ten_thousand=a/10000;
+  thousand=(a-ten_thousand*10000)/1000;
+  hundred=(a-thousand*1000-ten_thousand*10000)/100;
+  ten=(a-hundred*100-thousand*1000-ten_thousand*10000)/10;
+  one=(a-ten*10-hundred*100-thousand*1000-ten_thousand*10000);
+switch(t)
+{
+case 5:{printf("%d%c%d%c%d%c%d%c%d\n",ten_thousand,c,thousand,c,hundred,c,ten,c,one);
+       printf("%d%d%d%d%d",one,ten,hundred,thousand,ten_thousand);
+       break;}
+case 4:printf("%d%c%d%c%d%c%d\n",thousand,c,hundred,c,ten,c,one);
+       printf("%d%d%d%d",one,ten,hundred,thousand);
+       break;
+case 3:printf("%d%c%d%c%d\n",hundred,c,ten,c,one);
+       printf("%d%d%d",one,ten,hundred);
+       break;
+case 2:printf("%d%c%d\n",ten,c,one);
+       printf("%d%d",one,ten);
+       break;
+case 1:printf("%d\n",one);
+       printf("%d",one);
+       break;
+}
+return 0;
+}

@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+	int a;
+	scanf("%d",&a);
+	switch (a/100000)
+	{
+		case (0) :printf("%d",a/10);
+		break;
+		case (1):printf("%d",(10000+(a-100000)*0.075));
+		break;
+		case (2,3):printf("%d",17500+(a-200000)*0.05);
+		break;
+		case (4,5):printf("%d",27500+(a-400000)*0.03);
+		break;
+		case (6,7,8,9):printf("%d",33500+(a-600000)*0.015);
+		break;
+		default :printf("%d",39500+(a-1000000)*0.01);
+	}
+   return 0;
+}
+		

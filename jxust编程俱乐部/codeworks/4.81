@@ -1,0 +1,18 @@
+#include<iostream>
+#include<iomanip>
+#define P1 3.14
+using namespace std;
+int main()
+{
+	float r,a,b,c,d,e;
+	float h;
+	cin>>r>>h;
+	a=2*r*P1;
+	b=r*r*P1;
+	c=4*r*r*P1;
+	d=4*r*r*r*P1/3;
+	e=r*r*h*P1;
+	cout<<setiosflags(ios::fixed)<<setprecision(2);
+	cout<<"C1="<<a<<endl<<"Sa="<<b<<endl<<"Sb="<<c<<endl<<"Va="<<d<<endl<<"Vb="<<e;
+	return 0;
+}

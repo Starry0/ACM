@@ -1,0 +1,28 @@
+求最小的K，使的K * M % N = 1
+则存在X使的 K*M = 1 + X*N 
+X = -X   即 K*M + X*N = 1
+这样就是求逆元了，已知M和N求最小的K，
+当求的K是负数时  K = (K+N)%N
+
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int extgcd(int a, int b, int &x, int &y){
+    int d = a;
+    if(b != 0){
+        d = extgcd(b,a%b,y,x);
+        y -= (a/b)*x;
+    }else{
+        x = 1; y = 0;
+    }
+    return d;
+}
+
+int main(){
+    int n, m, x, y;
+    scanf("%d%d",&m,&n);
+    extgcd(m,n,x,y);
+    printf("%d\n",(x+n)%n);
+    return 0;
+}

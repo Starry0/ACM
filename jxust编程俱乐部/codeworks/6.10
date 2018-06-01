@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+	int N,a,s=1;
+	scanf("%d",&N);
+	for (a=0;a<N-1;a++)
+	{
+		s++;
+		s*=2;
+	}
+	printf("%d",s);
+	return 0;
+}
