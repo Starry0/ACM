@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1479625278 source:e:\code\acm\华东交通大学2016年acm“双基”程序设计竞赛\华盛顿洗衣服\main.cpp
+	<iostream>
+	<algorithm>
+	<cstdio>
+	<cstring>
+

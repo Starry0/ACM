@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1480751496 source:e:\code\acm\华东交通大学2016届新生选拔赛\d\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+
