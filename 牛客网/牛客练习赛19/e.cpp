@@ -4,17 +4,20 @@
 using namespace std;
 bool vis[1010];
 map<int,int> mp;
+int a[101], b[101];
 int main() {
-    int n, a, b, ans = 0;
+    int n, ans = 0;
     cin >> n;
     for(int i = 1; i <= n; i ++) {
-        cin >> a >> b;
-        mp[b]++;
-        if(i != b) vis[b] = 1;
-        
+        cin >> a[i] >> b[i];
     }
-    for(int i = 1; i <= 1000; i ++)
-        if(vis[i]) ans += mp[i];
-    cout << n-ans << endl;
+    for(int i = 1; i <= n; i ++) {
+        for(int j = 1; j <= n; j ++) {
+            if(i == j) continue;
+            if(a[j] == b[i]) vis[j] = 1;
+        }
+    }
+    for(int i = 1; i <= n; i ++) if(!vis[i]) ans++;
+    cout << ans << endl;
     return 0;
 }
