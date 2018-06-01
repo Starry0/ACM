@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1480126663 source:e:\code\acm\华东交通大学2016新生赛\i\main.cpp
+	<iostream>
+	<cstdio>
+
+1480128200 source:e:\code\acm\哈尔滨理工大学2016新生赛\i\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

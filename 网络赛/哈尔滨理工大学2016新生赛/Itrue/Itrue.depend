@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1480157954 source:e:\code\acm\哈尔滨理工大学2016新生赛\itrue\main.cpp
+	<fstream>
+	<cstdio>
+	<string>
+	<iostream>
+
