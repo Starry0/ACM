@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1481444495 source:e:\code\ÑµÁ·\map\mapinsert\main.cpp
+	<iostream>
+	<map>
+	<string>
+

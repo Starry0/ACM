@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1489210761 source:e:\code\acm\16jxust-stl\b\main.cpp
+	<iostream>
+	<map>
+	<cstring>
+

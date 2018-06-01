@@ -1,0 +1,255 @@
+3.16
+http://acm.zjut.edu.cn/ 1205
+
+3.17
+http://acm.zjut.edu.cn/ 1244
+
+4.1
+Quicksum
+http://acm.zju.edu.cn/ 2812
+Mid-Central USA 2006
+
+4.2
+IBM Minus One
+http://acm.zju.edu.cn/ 1240
+Southwestern Europe 1997,Practice
+
+4.3
+Binary Numbers
+http://acm.zju.edu.cn/ 1383
+Central Europe 2001,Practice
+
+4.4
+Encoding
+http://acm.zju.edu.cn/ 2478
+Zhejiang Provincial Programming Contest 2005
+
+4.5
+Look and Say
+http://acm.zju.edu.cn/ 2886
+The 2007 ACM Rocky Mountain Programming Contest
+
+4.6
+Abbreviation
+http://acm.zju.edu.cn/ 2947
+Zhejiang University Local Contest 2008
+
+4.7
+The Seven Percent Solution
+http://acm.zju.edu.cn/ 2932
+The 2007 ACM Mid-Central USA Programming Contest
+
+4.8
+Digital Roots
+http://acm.zju.edu.cn/ 1115
+Greater New York 2000
+
+4.9
+Box of Bricks
+http://acm.zju.edu.cn/ 1251
+Southwestern Europe 1997
+
+4.10
+Geometry Made Simple
+http://acm.zju.edu.cn/ 1241
+Southwestern Europe 1997,Practice
+
+4.11
+Reverse Text
+http://acm.zju.edu.cn/ 1295
+Southwestern Europe 1996,Pratice
+
+4.12
+Word Reversal
+http://acm.zju.edu.cn/ 1151
+East Central North America 1999,Pratice
+
+4.13
+A Simple Question of Chemistry
+http://acm.zju.edu.cn/ 1763
+Mid-Atlantic USA 2003
+
+4.14
+Adding Reversed Numbers
+http://acm.zju.edu.cn/ 2001
+Central Europe 1998
+
+4.15
+Image Transformation
+http://acm.zju.edu.cn/ 2857
+Zhejiang Provincial Programming Contest 2007
+
+4.16
+Beautiful Meadow
+http://acm.zju.edu.cn/ 2850
+Problem Source:Zhejiang Provincial Programming Contest 2007
+
+4.17
+DNA Sorting
+http://acm.zju.edu.cn/ 1188
+East Central North America 1998
+
+4.18
+Daffodil Number
+http://acm.zju.edu.cn/ 2736
+Zhejiang Provincial Programming Contest 2006,Preliminary
+
+4.19
+Error Correction
+http://acm.zju.edu.cn/ 1949
+University of Ulm Local Contest 1998
+
+4.20
+Martian Addition
+http://acm.zju.edu.cn/ 1205
+Zhejiang University Local Contest 2002,Preliminary
+
+4.21
+FatMouse'Trade
+http://acm.zju.edu.cn/ 2109
+Zhejiang Provincial Programming Contest 2004
+
+4.22
+List the Books
+http://acm.zju.edu.cn/ 2727
+Zhejiang University Local Contest 2006,Preliminary
+
+4.23
+Head-to-Head Match
+http://acm.zju.edu.cn/ 2722
+Zhejiang University Local Contest 2006,Priliminary
+
+4.24
+Windows Message Queue
+http://acm.zju.edu.cn/ 2724
+Zhejiang University Local Contest 2006,Priliminary
+
+4.25
+Language of FatMouse
+http://acm.zju.edu.cn/ 1109
+Zhejiang University Training Contest 2001
+
+4.26
+Palindromes
+http://acm.zju.edu.cn/ 2744
+Zhejiang Provincial Programming Contest 2006
+
+4.27
+Root of the Problem
+http://acm.zju.edu.cn/ 2818
+Problem Source:Mid-Central USA 2006
+
+4.28
+Magic Square
+http://acm.zju.edu.cn/ 2835
+Zhejiang University Local Contest 2007
+
+4.29
+Semi-Prime
+http://acm.zju.edu.cn/ 2723
+Zhejiang University Local Contest 2006,Preliminary
+
+4.30
+Beautiful Number
+http://acm.zju.edu.cn/ 2829
+Zhejiang University Local Contest 2007,Preliminary
+
+4.31
+Phone List
+http://acm.zju.edu.cn/ 2876
+The 2007 Nordic Collegiate Programming Contest
+
+4.32
+CAlendar
+http://acm.zju.edu.cn/ 2420
+Asia 2004,Shanghai,Preliminary
+
+4.33
+No Brainer
+http://acm.zju.edu.cn/ 2201
+South Central USA 2004
+
+4.34
+Quick Change
+http://acm.zju.edu.cn/ 2772
+Greater Ner York Reginoal 2006
+
+4.35
+Total Amount
+http://acm.zju.edu.cn/ 2476
+Zhejiang Provincial Programming Contest 2005
+
+4.36
+Electrical Outlets
+http://acm.zju.edu.cn/ 2807
+Nordic 2005
+
+4.37
+Speed Limit
+http://acm.zju.edu.cn/ 2176
+Mid-Central USA 2004
+
+4.38
+Beat the Spread
+http://acm.zju.edu.cn/ 2388
+University of Waterloo Local Contest 2005.02.05
+
+4.39
+Champion of the Swordsmanship
+http://acm.zju.edu.cn/ 2830
+Zhejiang University Local Contest 2007,Preliminary
+
+4.40
+Doubles
+http://acm.zju.edu.cn/ 1760
+Mid-Central USA 2003
+
+4.41
+File Searching 
+http://acm.zju.edu.cn/ 2840
+Zhejiang UNiversity Local Contest 2007
+
+4.42
+Old Bill
+http://acm.zju.edu.cn/ 2679
+Asia 2003,Seoul
+
+4.43
+Divisor Summation
+http://acm.zju.edu.cn/ 2095
+ZOJ Monthly,March 2004
+
+4.44
+Easier Done Than Said?
+http://acm.zju.edu.cn/ 1698
+Mid-Central USA 2000
+
+4.45
+Let the Balloon Rise
+http://acm.zju.edu.cn/ 2104
+Zhejiang Provincial Programming Contest 2004
+
+4.46
+The Harder Problem Ever
+http://acm.zju.edu.cn/ 1392
+South Central USA 2002
+
+4.47
+Fibonacci Again
+http://acm.zju.edu.cn/ 2060
+ZOJ Monthly,December 2003
+
+4.48
+Excuses,Excuses!
+http://acm.zju.edu.cn/ 1315
+South Central USA 1996
+
+4.49
+Lowest Bit 
+http://acm.zju.edu.cn/ 2417
+Zhejiang University Local Contets 2005
+
+4.50
+Longest Ordered Subsequence
+http://acm.zju.edu.cn/ 2136
+Northeastern Europe 2002,Far-Eastern Subregion
