@@ -11,6 +11,7 @@ int main() {
         cin >> a >> b;
         mp[b]++;
         if(i != b) vis[b] = 1;
+        
     }
     for(int i = 1; i <= 1000; i ++)
         if(vis[i]) ans += mp[i];
