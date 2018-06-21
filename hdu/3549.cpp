@@ -1,5 +1,5 @@
 /*
-Ford-Fullkerson
+Ford-Fullkerson 1956年
 */
 
 /*#include <iostream>
@@ -61,7 +61,7 @@ int main() {
 }
 */
 /*
-Edmond—Karp 算法
+Edmonds Karp 算法 1972年
 */
 /*#include <iostream>
 #include <stdio.h>
@@ -128,7 +128,7 @@ int main() {
 }
 */
 /*
-Dinic算法
+Dinic算法  1972
 */
 
 #include <iostream>
