@@ -26,7 +26,14 @@ int main() {
 		dfs(i,min(i-1,d+1-i));
 	}
 //	cout << cnt << endl;
-	if(cnt > n) {
+	bool flag = true;
+	for(int i = 1; i <= n; i ++) {
+		if(vs[i].size() > k) {
+			flag = false;
+			break;
+		} 
+	}
+	if(cnt > n && flag) {
 		printf("YES\n");
 		for(int i = 1; i <= n; i ++) {
 			for(int j = 0; j < vs[i].size(); j ++) {
