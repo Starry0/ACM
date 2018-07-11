@@ -3,34 +3,26 @@
 using namespace std;
 const int N = 2e5+10;
 int a[N], n, m, k;
-int dp[N][2];
+map<int,ll> mp;
 int main() {
 	scanf("%d %d", &n, &m);
 	for(int i = 1; i <= n; i ++) {
 		scanf("%d", &a[i]);
 		if(a[i] == m) k = i;
 	}
-	int ans = 1,cnt1 = 0, cnt2 = 0;
-	int i = k-1;
-	while(i > 0) {
-		if(a[i] > m) {
-			dp[i][0] = dp[i+1][0];
-			dp[i][1] = dp[i+1][1] + 1;
-		} else {
-			dp[i][0] = dp[i+1][0] + 1;
-			dp[i][1] = dp[i+1][1];
-		}
+	int s = 1;
+	for(int i = k; i > 0; i --) {
+		if(a[i] > m) s++;
+		else s--;
+		mp[s]++;
 	}
-	i = k+1;
-	while(i <= n) {
-		if(a[i] > m) {
-			dp[i][0] = dp[i+1][0];
-			dp[i][1] = dp[i+1][1] + 1;
-		} else {
-			dp[i][0] = dp[i+1][0] + 1;
-			dp[i][1] = dp[i+1][1];
-		}
+	s = -1;
+	ll ans = 0;
+	for(int i = k; i <= n; i ++) {
+		if(a[i] > m) s--;
+		else s++;
+		ans += mp[s] + mp[s+1];
 	}
-	
+	printf("%lld\n",ans);
 	return 0;
 }

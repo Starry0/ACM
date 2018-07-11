@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+/*#include <bits/stdc++.h>
 #define INF 0x3f3f3f3f
 using namespace std;
 const int N = 3600*2;
@@ -40,6 +40,47 @@ int main() {
 				}
 			}
 		}
+	}
+	return 0;
+}*/
+
+#include <bits/stdc++.h>
+#define INF 0x3f3f3f3f
+using namespace std;
+int T, n, t;
+int a[20], dp[4000];
+typedef pair<int,int> P;
+int main() {
+	scanf("%d", &T);
+	while(T--) {
+		scanf("%d%d", &n, &t);
+		for(int i = 0; i < n; i ++) cin >> a[i];
+		memset(dp, INF, sizeof(dp));
+		queue<P> que;
+		que.push(P(0,0));
+		dp[0] = 0;
+		int MIN = 1e5, Time = 1e5;
+		while(que.size()) {
+			P p = que.front(); que.pop();
+			if(p.second >= t) {
+				if(p.second < Time) {
+					Time = p.second;
+					MIN = p.first;
+				} else if(p.second == Time) {
+					MIN = min(MIN, p.first );
+				}
+			}
+			for(int i = 0; i < n; i ++) {
+				int tt = p.second + a[i];
+				if(tt < 0) tt = 0;
+				if(tt > 3600) tt = 3600;
+				if(dp[tt] > p.first+1) {
+					dp[tt] = p.first + 1;
+					que.push(P(p.first+1,tt));
+				}
+			}
+		}
+		cout << MIN << ' ' << Time -t<< endl;
 	}
 	return 0;
 }
