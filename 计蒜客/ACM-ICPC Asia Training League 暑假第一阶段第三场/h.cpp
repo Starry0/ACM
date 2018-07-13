@@ -14,7 +14,6 @@ void dfs(int x) {
 		}
 	}
 }
-
 int main() {
 	int n, k;
 	cin >> n;
