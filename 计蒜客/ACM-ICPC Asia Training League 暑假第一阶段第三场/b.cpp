@@ -2,56 +2,42 @@
 #define INF 0x3f3f3f3f
 #define ll long long
 using namespace std;
-const int N = 1e3+10;
-vector<int> vs[N], pre[N];
-bool vis[N];
-bool ok(int v) {
-	for(int i = 0; i < pre[v].size(); i ++) {
-		if(!vis[pre[v][i]]) return false;
-	}
-	return true;
-}
+const int N = 2e3+10;
+int edge[N][N], vis[N], match[N];
+int n, k, v, u;
 
-void dfs(int  v) {
-	vis[v] = true;
-	for(int i = 0; i < vs[v].size(); i ++) {
-		if(!vis[vs[v][i]]) {
-			dfs(vs[v][i]);
-			break;
-		}
-	}
+bool dfs(int v) {
+    for(int i = n; i < 2*n; i ++) {
+        if(edge[v][i] && !vis[i]) {
+            vis[i] = 1;
+            if(match[i] == -1 || dfs(match[i])) {
+                match[i] = v;
+                return true;
+            }
+        }
+    }
+    return false;
 }
-
+int max_match() {
+    int res = 0;
+    memset(match, -1, sizeof(match));
+    for(int i = 0; i < n; i ++) {
+        if(match[i] < 0) {
+            memset(vis, 0, sizeof(vis));
+            if(dfs(i)) res++;
+        }
+    }
+    return res;
+}
 int main() {
-	int n, k, v, u;
 	cin >> n;
 	for(int i = 0; i < n; i ++) {
 		cin >> k;
 		for(int j = 0; j < k; j ++) {
 			cin >> v;
-			vs[v].push_back(i);
-			pre[i].push_back(v);
+			edge[i][v+n] = 1;
 		}
 	}
-	int ans = 0;
-	while(1) {
-		for(int i = 0; i < n; i ++) {
-			if(ok(i) && !vis[i]) {
-				dfs(i);
-				ans++;
-				for(int i = 0; i < n; i ++) {
-					printf("%d vis:%d\n",i,vis[i] );
-				}printf("\n");
-			}
-			
-		}
-		int cnt = 0;
-		for(int i = 0; i < n; i ++) {
-			if(vis[i]) cnt++;
-		}
-		if(cnt == n) break;
-	}
-
-	cout << ans << endl;
+	cout << n-max_match() << endl;
 	return 0;
 }
