@@ -24,8 +24,8 @@ int main() {
 	sort(e,e+m,cmp);
 	ll ans = 0;
 	for(int i = 0; i < m; i ++) {
-		if(find(e[i].x) == find(e[i].y)) ans += e[i].z;
-		else {
+		if(find(e[i].x) != find(e[i].y)) {
+			ans += e[i].z;
 			fa[find(e[i].x)] = find(e[i].y);
 		}
 	}
