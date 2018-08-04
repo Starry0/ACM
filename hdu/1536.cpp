@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 110;
-int s[N*N], SG[N*N], f[N];
+int SG[N*N], f[N];
 int k, m, l, y, x;
 int getSG(int n) {
     int mex[101];
