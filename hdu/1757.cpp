@@ -38,6 +38,10 @@ int main() {
             continue;
         }
         mat B = pow(A, k - 9);
+        for(int i = 0; i < 10; i ++) {
+            for(int j = 0; j < 10; j ++) printf("%d ",B[i][j]);
+            printf("\n");
+        }
         int ans = 0;
         for(int i = 0; i < 10; i ++) {
             ans += (B[0][i]*(9-i))%m;
