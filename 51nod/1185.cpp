@@ -3,7 +3,7 @@
 #include <string.h>
 #define ll long long
 using namespace std;
-const  ll Gold[3] = { 618033988, 749894848, 204586834};
+const  ll Gold[3] = {618033988, 749894848, 204586834};
 const int mod = 1000000000;
 int main(){
     int t;
