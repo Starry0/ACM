@@ -20,7 +20,7 @@ int main() {
 	for(int i = 2; i <= n; i ++) {
 		if(a[i]!=a[i-1]) a[m++] = a[i];
 	}
-	for(int i = 1; i < m; i ++) printf("%d ",a[i]);printf("\n");
+	// for(int i = 1; i < m; i ++) printf("%d ",a[i]);printf("\n");
 	int ans = 1;
 	h[0] = vis[0] = vis[n+1] = 1;
 	for(int i = 1; i < m; i ++) {
