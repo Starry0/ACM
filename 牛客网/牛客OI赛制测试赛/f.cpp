@@ -16,7 +16,7 @@ ll pow_mod(ll x, ll n){
 }
 
 int main() {
-	memset(c, 0, sizeof(c));
+    memset(c, 0, sizeof(c));
     c[0][0] = 1;
     for (int i = 1; i <= 1000; i++) {
         c[i][0] = 1;
