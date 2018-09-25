@@ -34,13 +34,11 @@ void dij() {
 int Astart() {
 	priority_queue<Nod> que;
 	que.push((Nod){s,0});
-	k--;
+	int ans = 0;
 	while(que.size()) {
 		Nod ee = que.top(); que.pop();
-		if(ee.v == e) {
-			if(k) k--;
-			else return ee.w;
-		}
+		if(ee.v == e) ans++;
+		if(ans == k) return ee.w;
 		for(auto E:vs[ee.v]) {
 			int u = E.first, w = E.second;
 			que.push((Nod){u,ee.w+w});
