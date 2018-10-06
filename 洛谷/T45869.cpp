@@ -19,7 +19,7 @@ int main() {
         while(l >= 1 && r <= n && s[l][y] = s[r][y]) {
             l--;r++; ans2 += 2;
         }
-        
+        int l = 
     }
     return 0;    
 } 
