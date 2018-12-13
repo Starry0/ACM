@@ -22,7 +22,7 @@ int main() {
 		ans *= x;
 		MAX = max(MAX, mp[x]);
 		st.insert(mp[x]);
-		printf("%d %d\n",x,mp[x]);
+		// printf("%d %d\n",x,mp[x]);
 	}
 	int bit;
 	for(bit = 0; (1<<bit) < MAX; bit ++) ;
