@@ -1,7 +1,10 @@
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
-int main(){
+const int N = 2e5+10;
+int n;
 
-    return 0;
+int main() {
+
+	return 0;
 }
