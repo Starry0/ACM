@@ -3,7 +3,7 @@ using namespace std;
 
 
 int main() {
-	Solution s = new Solution(2);
+	Solution sol;
 
 	return 0;
 }
