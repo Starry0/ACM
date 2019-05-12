@@ -3,14 +3,14 @@ using namespace std;
 
 class LRUCache {
 public:
-    LRUCache(int capacity):_cap(capacity) {}
+    LRUCache(int capacity):_cap(capacity) { }
     
     int get(int key) {
         auto it = _mp.find(key);
 		if(it == _mp.end()) return -1;
 		int val = it->second->second;
 		_list.erase(it->second);
-		_list.push_front(make_pair(key, val));
+		_list.push_front(make_pair(key,val));
 		_mp[key] = _list.begin();
 		return val;
     }
@@ -23,16 +23,15 @@ public:
 		_list.push_front(make_pair(key, value));
 		_mp[key] = _list.begin();
 		if(_list.size() > _cap) {
-		   int key = _list.back().first;
-		   _list.pop_back();
-		   _mp.erase(key);
+			int key = _list.back().first;
+			_list.pop_back();
+			_mp.erase(key);
 		}
     }
-private:
+private: 
 	int _cap;
-	unordered_map<int, list<pair<int,int> >::iterator > _mp;
 	list<pair<int,int> > _list;
-	
+	unordered_map<int, list<pair<int,int>>::iterator > _mp;
 };
 
 /**
@@ -41,8 +40,6 @@ private:
  * int param_1 = obj->get(key);
  * obj->put(key,value);
  */
- 
- 
 void test() {
 	LRUCache* cache = new LRUCache(2);
 	cache->put(1, 1);
@@ -57,6 +54,5 @@ void test() {
 }
 int main() {
 	test();
-
 	return 0;
 }
