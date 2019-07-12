@@ -3,45 +3,43 @@ using namespace std;
 
 class LRUCache {
 public:
-    LRUCache(int capacity):_cap(capacity) {}
+    LRUCache(int capacity) {
+        _cap = capacity;
+    }
     
     int get(int key) {
         auto it = _mp.find(key);
-		if(it == _mp.end()) return -1;
-		int val = it->second->second;
-		_list.erase(it->second);
-		_list.push_front(make_pair(key, val));
-		_mp[key] = _list.begin();
-		return val;
+        if(it == _mp.end()) return -1;
+        int value = it->second->second;
+        _list.erase(it->second);
+        _list.push_front(make_pair(key, value));
+        _mp[key] = _list.begin();
+        return value;
     }
     
     void put(int key, int value) {
-       auto it = _mp.find(key);
-	   if(it != _mp.end()) {
-		   _list.erase(it->second);
-	   }
-	   _list.push_front(make_pair(key, value));
-	   _mp[key] = _list.begin();
-	   if(_list.size() > _cap) {
-		   int key = _list.back().first;
-		   _list.pop_back();
-		   _mp.erase(key);
-	   }
+        auto it = _mp.find(key);
+        if(it != _mp.end()) {
+        	_list.erase(it->second);
+        	_list.push_front(make_pair(key, value));
+        	_mp[key] = _list.begin();
+        } else {
+        	if(_list.size() >= _cap) {
+        		int old_key = _list.back().first;
+        		_list.pop_back();
+        		_mp.erase(old_key);
+        	}
+        	_list.push_front(make_pair(key, value));
+        	_mp[key] = _list.begin();
+        }
     }
 private:
 	int _cap;
-	unordered_map<int, list<pair<int,int> >::iterator > _mp;
 	list<pair<int,int> > _list;
-	
+	unordered_map<int, list<pair<int,int>>::iterator> _mp;
 };
 
-/**
- * Your LRUCache object will be instantiated and called as such:
- * LRUCache* obj = new LRUCache(capacity);
- * int param_1 = obj->get(key);
- * obj->put(key,value);
- */
- 
+
  
 void test() {
 	LRUCache* cache = new LRUCache(2);
