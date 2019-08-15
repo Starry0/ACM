@@ -7,41 +7,64 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
+// class Solution {
+// public:
+//     ListNode *detectCycle(ListNode *head) {
+//         ListNode* pNode = hasCycle(head);
+// 		if(pNode == NULL) return NULL;
+// 		ListNode* pNodeTwo = pNode;
+// 		int len = 1;
+// 		while(pNodeTwo->next != pNode) {
+// 			pNodeTwo = pNodeTwo->next;
+// 			len++;
+// 		}
+// 		pNode = pNodeTwo = head;
+// 		int cnt = len;
+// 		while(cnt-- > 0) {
+// 			pNode = pNode->next;
+// 		}
+// 		while(pNode != pNodeTwo) {
+// 			pNode = pNode->next;
+// 			pNodeTwo = pNodeTwo->next;
+// 		}
+// 		return pNodeTwo;
+//     }
+// private:
+// 	ListNode *hasCycle(ListNode *head) {
+// 		if(head == NULL) return NULL;
+// 		ListNode* pNode = head, *pNodeTwo = head;
+// 		while(pNodeTwo->next != NULL) {
+// 			pNode = pNode->next;
+// 			pNodeTwo = pNodeTwo->next;
+// 			if(pNodeTwo->next != NULL) pNodeTwo = pNodeTwo->next;
+// 			else return NULL;
+// 			if(pNode == pNodeTwo) return pNode;
+// 		}
+// 		return NULL;
+// 	}
+// };
+
+
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        ListNode* pNode = hasCycle(head);
-		if(pNode == NULL) return NULL;
-		ListNode* pNodeTwo = pNode;
-		int len = 1;
-		while(pNodeTwo->next != pNode) {
+        ListNode* pNodeOne = head, *pNodeTwo = head;
+		while(pNodeTwo) {
 			pNodeTwo = pNodeTwo->next;
-			len++;
-		}
-		pNode = pNodeTwo = head;
-		int cnt = len;
-		while(cnt-- > 0) {
-			pNode = pNode->next;
-		}
-		while(pNode != pNodeTwo) {
-			pNode = pNode->next;
-			pNodeTwo = pNodeTwo->next;
-		}
-		return pNodeTwo;
-    }
-private:
-	ListNode *hasCycle(ListNode *head) {
-		if(head == NULL) return NULL;
-		ListNode* pNode = head, *pNodeTwo = head;
-		while(pNodeTwo->next != NULL) {
-			pNode = pNode->next;
-			pNodeTwo = pNodeTwo->next;
-			if(pNodeTwo->next != NULL) pNodeTwo = pNodeTwo->next;
+			if(pNodeTwo) pNodeTwo = pNodeTwo->next;
 			else return NULL;
-			if(pNode == pNodeTwo) return pNode;
+			pNodeOne = pNodeOne->next;
+			if(pNodeOne == pNodeTwo) break;
+		}
+		if(pNodeOne != pNodeTwo) return NULL;
+		pNodeOne = head;
+		while(pNodeOne && pNodeTwo) {
+			if(pNodeOne == pNodeTwo) return pNodeOne;
+			pNodeOne = pNodeOne->next;
+			pNodeTwo = pNodeTwo->next;
 		}
 		return NULL;
-	}
+    }
 };
 
 int main() {

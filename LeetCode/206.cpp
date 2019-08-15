@@ -21,17 +21,30 @@ struct ListNode {
 //     }
 // };
 
+// class Solution {
+// public:
+//     ListNode* reverseList(ListNode* head) {
+//         if(head == NULL || head->next == NULL) return head;
+// 		ListNode* pNode = reverseList(head->next);
+// 		head->next->next = head;
+// 		head->next = NULL;
+// 		return pNode;
+//     }
+// };
+
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        if(head == NULL || head->next == NULL) return head;
-		ListNode* pNode = reverseList(head->next);
-		head->next->next = head;
-		head->next = NULL;
-		return pNode;
+        ListNode* newHead = NULL;
+		while(head) {
+			ListNode* next = head->next;
+			head->next = newHead;
+			newHead = head;
+			head = next;
+		}
+		return newHead;
     }
 };
-
 int main() {
 	Solution sol;
 	ListNode *a = new ListNode(1);
